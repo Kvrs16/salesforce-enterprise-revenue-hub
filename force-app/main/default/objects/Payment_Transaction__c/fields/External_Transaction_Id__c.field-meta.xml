@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Transaction_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >Provider transaction identifier. Never store payment credentials here.</description>
+    <inlineHelpText
+  >Provider reference only; never store card data or credentials.</inlineHelpText>
+    <externalId>true</externalId>
+    <label>External Transaction ID</label>
+    <length>255</length>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

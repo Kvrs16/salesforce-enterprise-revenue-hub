@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terminal_Status_Requires_Completion_Time</fullName>
+    <active>true</active>
+    <description
+  >Terminal job outcomes must record their completion time.</description>
+    <errorConditionFormula
+  >AND(OR(ISPICKVAL(Status__c, "Completed"), ISPICKVAL(Status__c, "Failed"), ISPICKVAL(Status__c, "Dead Letter"), ISPICKVAL(Status__c, "Cancelled")), ISBLANK(Completed_At__c))</errorConditionFormula>
+    <errorDisplayField>Completed_At__c</errorDisplayField>
+    <errorMessage
+  >A completion time is required for a terminal job status.</errorMessage>
+</ValidationRule>

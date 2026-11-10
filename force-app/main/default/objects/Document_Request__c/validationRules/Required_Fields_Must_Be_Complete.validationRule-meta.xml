@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_Must_Be_Complete</fullName>
+    <active>true</active>
+    <description
+  >Every document request must include its Quote and provider configuration.</description>
+    <errorConditionFormula
+  >OR(ISBLANK(Quote__c), ISBLANK(TEXT(Status__c)), ISBLANK(TEXT(Document_Provider__c)), ISBLANK(TRIM(Template_Key__c)))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Complete all required document request fields.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_Must_Be_Complete</fullName>
+    <active>true</active>
+    <description
+  >Every integration job must include a correlation ID, type, status, and attempt limit.</description>
+    <errorConditionFormula
+  >OR(ISBLANK(TRIM(Correlation_Id__c)), ISBLANK(TEXT(Integration_Type__c)), ISBLANK(TEXT(Status__c)), ISNULL(Maximum_Attempts__c))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Complete all required integration job fields.</errorMessage>
+</ValidationRule>

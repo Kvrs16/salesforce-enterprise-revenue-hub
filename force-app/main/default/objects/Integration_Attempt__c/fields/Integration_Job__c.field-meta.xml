@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Job__c</fullName>
+    <description>Parent logical integration job.</description>
+    <inlineHelpText
+  >Parent job whose history this attempt records.</inlineHelpText>
+    <label>Integration Job</label>
+    <referenceTo>Integration_Job__c</referenceTo>
+    <relationshipLabel>Integration Attempts</relationshipLabel>
+    <relationshipName>Integration_Attempts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

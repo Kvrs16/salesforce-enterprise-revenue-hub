@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Opportunity associated with the Quote being paid.</description>
+    <inlineHelpText>Opportunity must match the selected Quote.</inlineHelpText>
+    <label>Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Payment Transactions</relationshipLabel>
+    <relationshipName>Payments_By_Opportunity</relationshipName>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_At__c</fullName>
+    <description
+  >Time at which an authoritative payment outcome was recorded.</description>
+    <inlineHelpText
+  >Set by the payment service after an authoritative terminal outcome.</inlineHelpText>
+    <label>Completed At</label>
+    <type>DateTime</type>
+</CustomField>

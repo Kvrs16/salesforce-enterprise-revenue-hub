@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_At__c</fullName>
+    <description
+  >Time at which the integration job reached a terminal outcome.</description>
+    <inlineHelpText
+  >Set by the integration worker when the job reaches a terminal state.</inlineHelpText>
+    <label>Completed At</label>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maximum_Attempts__c</fullName>
+    <defaultValue>3</defaultValue>
+    <description
+  >Maximum provider attempts captured when the job is created.</description>
+    <inlineHelpText
+  >Bounded retry limit copied from configuration when the job is created.</inlineHelpText>
+    <label>Maximum Attempts</label>
+    <precision>2</precision>
+    <scale>0</scale>
+    <type>Number</type>
+</CustomField>

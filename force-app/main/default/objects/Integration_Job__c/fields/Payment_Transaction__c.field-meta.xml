@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Transaction__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description
+  >Payment transaction associated with this integration job.</description>
+    <inlineHelpText
+  >Set for payment jobs; leave empty for document jobs.</inlineHelpText>
+    <label>Payment Transaction</label>
+    <referenceTo>Payment_Transaction__c</referenceTo>
+    <relationshipLabel>Integration Jobs</relationshipLabel>
+    <relationshipName>Payment_Integration_Jobs</relationshipName>
+    <type>Lookup</type>
+</CustomField>

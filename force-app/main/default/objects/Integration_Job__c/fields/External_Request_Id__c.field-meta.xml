@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Request_Id__c</fullName>
+    <description>Provider request identifier, when returned.</description>
+    <inlineHelpText
+  >Provider reference for support correlation; never store credentials.</inlineHelpText>
+    <label>External Request ID</label>
+    <length>255</length>
+    <type>Text</type>
+</CustomField>

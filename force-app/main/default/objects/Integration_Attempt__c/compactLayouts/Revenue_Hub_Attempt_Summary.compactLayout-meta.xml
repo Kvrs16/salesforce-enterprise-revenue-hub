@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Hub_Attempt_Summary</fullName>
+    <fields>Name</fields>
+    <fields>Attempt_Number__c</fields>
+    <fields>Outcome__c</fields>
+    <fields>HTTP_Status__c</fields>
+    <label>Revenue Hub Attempt Summary</label>
+</CompactLayout>

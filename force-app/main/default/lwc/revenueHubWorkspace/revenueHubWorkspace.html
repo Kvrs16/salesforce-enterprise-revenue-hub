@@ -1,0 +1,123 @@
+<template>
+  <lightning-card
+    title="Revenue Hub"
+    icon-name="standard:quotes"
+    class="workspace-card"
+  >
+    <div class="slds-p-around_medium">
+      <p class="slds-text-body_regular slds-m-bottom_medium">
+        Select an approved Quote to start a simulated payment or document
+        operation. No real payment or document provider is contacted.
+      </p>
+      <lightning-record-picker
+        label="Quote"
+        placeholder="Search Quotes..."
+        object-api-name="Quote"
+        onchange={handleQuoteChange}
+      >
+      </lightning-record-picker>
+
+      <template if:true={quoteId}>
+        <div class="slds-box slds-m-top_medium">
+          <p>{quoteStatusMessage}</p>
+          <template if:true={quoteRecord}>
+            <p class="slds-m-top_x-small">
+              Status: <strong>{quoteStatus}</strong>
+            </p>
+            <p>
+              Approved total:
+              <lightning-formatted-number
+                value={quoteTotal}
+                format-style="currency"
+              >
+              </lightning-formatted-number>
+            </p>
+          </template>
+          <lightning-input
+            class="slds-m-top_medium"
+            label="Document template key"
+            value={templateKey}
+            maxlength="100"
+            onchange={handleTemplateChange}
+          >
+          </lightning-input>
+          <div class="slds-m-top_medium">
+            <lightning-button
+              label="Request mock document"
+              variant="neutral"
+              onclick={handleDocumentRequest}
+              disabled={isRequestDisabled}
+              class="slds-m-right_small"
+            >
+            </lightning-button>
+            <lightning-button
+              label="Request mock payment"
+              variant="brand"
+              onclick={handlePaymentRequest}
+              disabled={isRequestDisabled}
+            >
+            </lightning-button>
+          </div>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+
+  <lightning-card
+    title="Recent Integration Jobs"
+    icon-name="standard:queue"
+    class="workspace-card slds-m-top_medium"
+  >
+    <div slot="actions">
+      <lightning-button-icon
+        icon-name="utility:refresh"
+        alternative-text="Refresh jobs"
+        title="Refresh jobs"
+        onclick={handleRefresh}
+        disabled={isBusy}
+      >
+      </lightning-button-icon>
+    </div>
+    <template if:true={jobsError}>
+      <div class="slds-p-around_medium slds-text-color_error" role="alert">
+        {jobsError}
+      </div>
+    </template>
+    <template if:false={jobsError}>
+      <template if:true={hasJobs}>
+        <div class="slds-p-horizontal_medium">
+          <lightning-datatable
+            key-field="Id"
+            data={jobs}
+            columns={columns}
+            hide-checkbox-column
+          >
+          </lightning-datatable>
+        </div>
+        <template if:true={canManageJobs}>
+          <div class="slds-p-around_medium">
+            <template for:each={jobs} for:item="job">
+              <template if:true={job.isRetryable}>
+                <lightning-button
+                  key={job.Id}
+                  label={job.retryLabel}
+                  title="Retry failed job"
+                  data-job-id={job.Id}
+                  onclick={handleRetry}
+                  disabled={isBusy}
+                  class="slds-m-right_x-small slds-m-bottom_x-small"
+                >
+                </lightning-button>
+              </template>
+            </template>
+          </div>
+        </template>
+      </template>
+      <template if:false={hasJobs}>
+        <div class="slds-p-around_medium">
+          No integration jobs are available to you.
+        </div>
+      </template>
+    </template>
+  </lightning-card>
+</template>

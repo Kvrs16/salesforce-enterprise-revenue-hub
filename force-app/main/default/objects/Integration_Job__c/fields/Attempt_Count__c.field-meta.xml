@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attempt_Count__c</fullName>
+    <description>Count of persisted integration attempts.</description>
+    <inlineHelpText
+  >Calculated from the related integration attempt history.</inlineHelpText>
+    <label>Attempt Count</label>
+    <summaryForeignKey
+  >Integration_Attempt__c.Integration_Job__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <type>Summary</type>
+</CustomField>

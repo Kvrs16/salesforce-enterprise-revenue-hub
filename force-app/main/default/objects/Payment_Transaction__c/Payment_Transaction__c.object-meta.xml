@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>PaymentTransactionRecordPage</content>
+        <formFactor>Large</formFactor>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <compactLayoutAssignment
+  >Revenue_Hub_Payment_Summary</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description
+  >Tracks one idempotent full-Quote payment request and its authoritative outcome.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <label>Payment Transaction</label>
+    <nameField>
+        <displayFormat>PAY-{000000}</displayFormat>
+        <label>Payment Transaction Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Payment Transactions</pluralLabel>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

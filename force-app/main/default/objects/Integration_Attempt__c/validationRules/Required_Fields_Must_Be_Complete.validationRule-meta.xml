@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_Must_Be_Complete</fullName>
+    <active>true</active>
+    <description
+  >Every integration attempt must include its sequence, start time, and outcome.</description>
+    <errorConditionFormula
+  >OR(ISNULL(Attempt_Number__c), ISBLANK(Started_At__c), ISBLANK(TEXT(Outcome__c)))</errorConditionFormula>
+    <errorDisplayField>Outcome__c</errorDisplayField>
+    <errorMessage
+  >Complete all required integration attempt fields.</errorMessage>
+</ValidationRule>

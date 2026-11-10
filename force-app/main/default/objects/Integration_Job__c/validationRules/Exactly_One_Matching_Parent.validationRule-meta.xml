@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exactly_One_Matching_Parent</fullName>
+    <active>true</active>
+    <description
+  >Each job must reference exactly one parent matching its integration type.</description>
+    <errorConditionFormula
+  >OR(AND(ISPICKVAL(Integration_Type__c, "Payment"), OR(ISBLANK(Payment_Transaction__c), NOT(ISBLANK(Document_Request__c)))), AND(ISPICKVAL(Integration_Type__c, "Document"), OR(ISBLANK(Document_Request__c), NOT(ISBLANK(Payment_Transaction__c)))))</errorConditionFormula>
+    <errorDisplayField>Integration_Type__c</errorDisplayField>
+    <errorMessage
+  >Select exactly one parent record matching the integration type.</errorMessage>
+</ValidationRule>

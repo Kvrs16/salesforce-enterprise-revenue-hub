@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attempt_Number_Must_Be_Positive</fullName>
+    <active>true</active>
+    <description>Attempt number must be a positive sequence value.</description>
+    <errorConditionFormula>Attempt_Number__c &lt; 1</errorConditionFormula>
+    <errorDisplayField>Attempt_Number__c</errorDisplayField>
+    <errorMessage>Attempt number must be at least one.</errorMessage>
+</ValidationRule>

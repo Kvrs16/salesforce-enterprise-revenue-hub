@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attempt_Number__c</fullName>
+    <description
+  >One-based execution number within the parent integration job.</description>
+    <inlineHelpText
+  >Sequential attempt number within the parent integration job.</inlineHelpText>
+    <label>Attempt Number</label>
+    <precision>2</precision>
+    <scale>0</scale>
+    <type>Number</type>
+</CustomField>

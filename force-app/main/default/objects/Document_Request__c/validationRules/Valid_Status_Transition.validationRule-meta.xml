@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Status_Transition</fullName>
+    <active>true</active>
+    <description
+  >Document request status changes must follow the documented lifecycle.</description>
+    <errorConditionFormula
+  >AND(NOT(ISNEW()), ISCHANGED(Status__c), NOT(OR(AND(ISPICKVAL(PRIORVALUE(Status__c), "Draft"), OR(ISPICKVAL(Status__c, "Queued"), ISPICKVAL(Status__c, "Cancelled"))), AND(ISPICKVAL(PRIORVALUE(Status__c), "Queued"), OR(ISPICKVAL(Status__c, "Processing"), ISPICKVAL(Status__c, "Cancelled"))), AND(ISPICKVAL(PRIORVALUE(Status__c), "Processing"), OR(ISPICKVAL(Status__c, "Generated"), ISPICKVAL(Status__c, "Failed"))), AND(ISPICKVAL(PRIORVALUE(Status__c), "Failed"), ISPICKVAL(Status__c, "Queued")))))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage
+  >Document request status cannot make that transition.</errorMessage>
+</ValidationRule>

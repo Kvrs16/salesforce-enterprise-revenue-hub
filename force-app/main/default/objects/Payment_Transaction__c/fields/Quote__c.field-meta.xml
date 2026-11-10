@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description
+  >Approved Salesforce Quote whose total is used for this full payment request.</description>
+    <inlineHelpText
+  >Approved Quote used to calculate the payment amount.</inlineHelpText>
+    <label>Quote</label>
+    <referenceTo>Quote</referenceTo>
+    <relationshipLabel>Payment Transactions</relationshipLabel>
+    <relationshipName>Payments_By_Quote</relationshipName>
+    <type>Lookup</type>
+</CustomField>

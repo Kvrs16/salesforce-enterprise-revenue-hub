@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description
+  >Approved standard Salesforce Quote used as the document source.</description>
+    <inlineHelpText
+  >Approved standard Salesforce Quote used to generate the document.</inlineHelpText>
+    <label>Quote</label>
+    <referenceTo>Quote</referenceTo>
+    <relationshipLabel>Document Requests</relationshipLabel>
+    <relationshipName>Document_Requests</relationshipName>
+    <type>Lookup</type>
+</CustomField>

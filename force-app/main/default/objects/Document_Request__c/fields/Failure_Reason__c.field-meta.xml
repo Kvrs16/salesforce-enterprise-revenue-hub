@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failure_Reason__c</fullName>
+    <description
+  >Redacted, user-safe document-generation failure summary.</description>
+    <inlineHelpText
+  >Sanitized failure summary; sensitive provider data is removed.</inlineHelpText>
+    <label>Failure Reason</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

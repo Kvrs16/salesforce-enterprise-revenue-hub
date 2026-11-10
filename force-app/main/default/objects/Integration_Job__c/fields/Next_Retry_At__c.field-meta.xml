@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Retry_At__c</fullName>
+    <description
+  >Earliest time when the scheduled retry dispatcher may enqueue this job.</description>
+    <inlineHelpText
+  >Set by retry scheduling; blank when no retry is pending.</inlineHelpText>
+    <label>Next Retry At</label>
+    <type>DateTime</type>
+</CustomField>

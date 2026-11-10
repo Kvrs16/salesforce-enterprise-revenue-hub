@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logical_Payment_Key__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >Server-generated unique key for the single full payment associated with a Quote.</description>
+    <inlineHelpText
+  >Prevents creating more than one logical full payment for the same Quote.</inlineHelpText>
+    <externalId>true</externalId>
+    <label>Logical Payment Key</label>
+    <length>80</length>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
